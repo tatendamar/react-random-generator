@@ -1,28 +1,35 @@
+// Button Component
 class Button extends React.Component {
   constructor(props) {
     super(props);
 
+    //Initial state
     this.state = {
       name: "",
       quote: ""
     };
   }
+  //After rendering (DOM available)
   componentDidMount = () => {
+    //provide the DOM with these events
     this.handleClick();
     this.handleTweetClick();
   };
 
+  //when a user clicks the new quote button this method is triggered
   handleClick = () => {
+    //use fetch Api method to reach to a server
     fetch(
       "https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json"
     )
-      .then(response => response.json())
+      .then(response => response.json()) //stringify the response
       .then(data =>
         data.quotes.map(res => ({
           name: `${res.author}`,
           quote: `${res.quote}`
         }))
       )
+      //if we get data we pass it to the next then inorder to perform a random genetor method
       .then(function(getData) {
         const randomData = Math.floor(Math.random() * getData.length);
         console.log(getData[randomData]);
@@ -37,8 +44,9 @@ class Button extends React.Component {
       })
       .catch(error => console.log("Error occured failed at:", error));
   };
-
+  //tweet button method
   handleTweetClick = () => {
+    //open in a different window
     window.open(
       `https://twitter.com/intent/tweet?text="${this.state.quote}"- ${
         this.state.name
@@ -63,6 +71,7 @@ class Button extends React.Component {
   }
 }
 
+//stateless Quoote Component
 class Qoute extends React.Component {
   constructor(props) {
     super(props);
@@ -82,6 +91,7 @@ class Qoute extends React.Component {
   }
 }
 
+//rendered App Component
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -89,8 +99,6 @@ class App extends React.Component {
   render() {
     return (
       <div className="main">
-        <div className="qtext" />
-
         <Button />
       </div>
     );
