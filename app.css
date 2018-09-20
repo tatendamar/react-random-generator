@@ -1,0 +1,84 @@
+.main {
+  max-width: 500px;
+  min-height: 250px;
+  border: 3px solid #8ee4af;
+  margin: 80px auto;
+  background-color: #5cdb95;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.1);
+}
+
+.main:not(:last-child) {
+  margin-bottom: -10px;
+}
+
+.text {
+  padding: 20px 0 40px 60px;
+  font-size: 25px;
+  letter-spacing: 3px;
+  position: relative;
+  background-color: #05386b;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.name {
+  font-size: 15px;
+  font-style: oblique;
+  margin: 0 auto;
+}
+
+.symbol {
+  font-size: 40px;
+}
+.btn {
+  display: inline-block;
+  position: relative;
+  margin: 0px 50px 20px 15px;
+  transition: all 0.2s;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.btn-qoute:link,
+.btn-qoute:visited {
+  background-color: aquamarine;
+  text-transform: capitalize;
+  text-decoration: none;
+  padding: 10px 10px;
+  float: right;
+  margin: 0 100px auto;
+  margin-left: 170px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.btn-twitter:link,
+.btn-twitter:visited {
+  background-color: aquamarine;
+  text-decoration: none;
+  padding: 5px 20px;
+  float: left;
+  margin: -35px auto;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.btn-qoute:hover,
+.btn-twitter:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn-qoute:active,
+.btn-twitter:active {
+  color: #05386b;
+}
+
+footer {
+  color: #05386b;
+  margin: -5% 0 0 35%;
+}
