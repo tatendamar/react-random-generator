@@ -1,7 +1,8 @@
 .main {
   max-width: 500px;
   min-height: 250px;
-  border: 3px solid #8ee4af;
+  border: 5px solid #8ee4af;
+  border-radius: 10px;
   margin: 80px auto;
   background-color: #5cdb95;
   box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.1);
