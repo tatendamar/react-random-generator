@@ -66,6 +66,7 @@ class Button extends React.Component {
             <i className="fa fa-twitter" />
           </a>
         </div>
+        <h5>Designed & coded by TATENDA MARUFU</h5>
       </div>
     );
   }
